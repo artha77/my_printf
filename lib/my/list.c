@@ -5,7 +5,7 @@
 ** Login   <artha@epitech.net>
 **
 ** Started on  Sat Nov 19 15:32:30 2016 dylan renard
-** Last update Sun Nov 20 13:35:07 2016 dylan renard
+** Last update Sun Nov 20 16:07:11 2016 dylan renard
 */
 
 #include "my_printf.h"
@@ -33,20 +33,6 @@ t_list		*push_begin_list(t_list *list,
   return (list);
 }
 
-int		list_map(t_list *list)
-{
-  if (is_empty_list(list))
-    return (my_putstr("null"), FAIL);
-  while (list != NULL)
-    {
-      my_putchar(list->key);
-      my_putstr("->");
-      list = list->next;
-    }
-  my_putstr("NULL");
-  return (SUCCESS);
-}
-
 t_list		*init_list()
 {
   t_list	*list;
@@ -67,8 +53,16 @@ t_list		*init_list()
   return (list);
 }
 
-int		exec_flag(char flag, va_list ap, t_list *list)
+int		exec_flag(char flag, va_list ap, t_list *list, int c)
 {
+  int		*read;
+
+  if (flag == 'n')
+    {
+      read = va_arg(ap, int *);
+      *read = c;
+      return (0);
+    }
   while (list != NULL)
     {
       if (flag == list->key)

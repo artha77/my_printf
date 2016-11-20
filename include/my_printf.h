@@ -5,7 +5,7 @@
 ** Login   <artha@epitech.net>
 **
 ** Started on  Sat Nov 19 15:25:42 2016 dylan renard
-** Last update Sun Nov 20 13:24:17 2016 dylan renard
+** Last update Sun Nov 20 15:59:02 2016 dylan renard
 */
 
 #ifndef MY_PRINTF_H_
@@ -27,7 +27,7 @@ t_list			*push_begin_list(t_list *,
 int			is_empty_list(t_list *);
 int			list_map(t_list *);
 t_list			*init_list(void);
-int			exec_flag(char, va_list, t_list *);
+int			exec_flag(char, va_list, t_list *, int);
 
 int			my_printf(const char *format, ...);
 

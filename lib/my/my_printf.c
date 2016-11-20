@@ -5,7 +5,7 @@
 ** Login   <artha@epitech.net>
 **
 ** Started on  Sat Nov 19 14:27:36 2016 dylan renard
-** Last update Sat Nov 19 18:35:16 2016 dylan renard
+** Last update Sun Nov 20 15:48:47 2016 dylan renard
 */
 
 #include <stdarg.h>
@@ -28,7 +28,7 @@ int		my_printf(const char *format, ...)
     {
       if (format[i] == '%' && format[i + 1] != '\0')
 	{
-	  c_read += exec_flag(format[i + 1], ap, list);
+	  c_read += exec_flag(format[i + 1], ap, list, c_read);
 	  i += 2;
 	}
       else
