@@ -5,7 +5,7 @@
 ** Login   <artha@epitech.net>
 **
 ** Started on  Sat Nov 19 17:19:48 2016 dylan renard
-** Last update Sun Nov 20 13:18:11 2016 dylan renard
+** Last update Sun Nov 20 16:37:55 2016 dylan renard
 */
 
 #include <stdarg.h>
@@ -17,9 +17,14 @@ int		func_putstr(va_list ap)
 {
   char		*s;
 
-  s = va_arg(ap, char *);
-  my_putstr(s);
-  return (my_strlen(s));
+      s = va_arg(ap, char *);
+      if (s != NULL)
+	{
+	  my_putstr(s);
+	  return (my_strlen(s));
+	}
+  my_putstr("(null)");
+  return (6);
 }
 
 int		func_putchar(va_list ap)
