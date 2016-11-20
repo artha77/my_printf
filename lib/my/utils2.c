@@ -5,7 +5,7 @@
 ** Login   <artha@epitech.net>
 **
 ** Started on  Sat Nov 19 18:48:57 2016 dylan renard
-** Last update Sun Nov 20 13:59:19 2016 dylan renard
+** Last update Sun Nov 20 16:13:15 2016 dylan renard
 */
 
 #include <stdarg.h>
@@ -61,5 +61,5 @@ int		func_putnbr_u(va_list ap)
 
   nb = va_arg(ap, int);
   my_putnbr_u(nb);
-  return (number_len_u(nb)); //a changer
+  return (number_len_u(nb));
 }

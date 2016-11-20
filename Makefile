@@ -5,7 +5,7 @@
 ## Login   <artha@epitech.net>
 ## 
 ## Started on  Mon Nov  7 15:05:57 2016 dylan renard
-## Last update Sun Nov 20 15:04:57 2016 dylan renard
+## Last update Sun Nov 20 16:19:24 2016 dylan renard
 ##
 
 all: libmy
@@ -18,6 +18,7 @@ clean:
 
 fclean: clean
 	@$(RM) libmy.a
+	@$(MAKE) fclean -C lib/my
 
 re: fclean all
 

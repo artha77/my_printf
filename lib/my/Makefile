@@ -5,7 +5,7 @@
 ## Login   <Artha77@epitech.net>
 ##
 ## Started on  Mon Oct 17 20:22:43 2016 dylan renard
-## Last update Sun Nov 20 15:04:13 2016 dylan renard
+## Last update Sun Nov 20 16:21:28 2016 dylan renard
 ##
 
 CC	=	gcc
@@ -21,12 +21,8 @@ RM	=	rm -f
 SRCS	=	is_bt.c	\
 		my_putchar.c	\
 		my_putstr.c	\
-		my_strcpy.c	\
-		my_strdup.c	\
-		my_str_isnum.c	\
 		my_strlen.c	\
 		my_puterr.c 	\
-		my_revstr.c	\
 		my_strcmp.c	\
 		my_put_nbr.c	\
 		my_putnbr_base.c	\
@@ -58,7 +54,7 @@ clean:
 	$(RM) $(OBJS)
 
 fclean:	clean
-	$(RM) ../../libmy.a
+	$(RM) $(NAME)
 
 re:	fclean all
 
