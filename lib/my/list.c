@@ -5,7 +5,7 @@
 ** Login   <artha@epitech.net>
 **
 ** Started on  Sat Nov 19 15:32:30 2016 dylan renard
-** Last update Sun Nov 20 16:07:11 2016 dylan renard
+** Last update Sun Nov 20 17:14:30 2016 dylan renard
 */
 
 #include "my_printf.h"
@@ -42,6 +42,7 @@ t_list		*init_list()
   list = push_begin_list(list, 's', &func_putstr);
   list = push_begin_list(list, 'c', &func_putchar);
   list = push_begin_list(list, 'd', &func_putnbr);
+  list = push_begin_list(list, 'i', &func_putnbr);
   list = push_begin_list(list, 'o', &func_putnbr_oc);
   list = push_begin_list(list, 'x', &func_putnbr_hexl);
   list = push_begin_list(list, 'X', &func_putnbr_hexu);
